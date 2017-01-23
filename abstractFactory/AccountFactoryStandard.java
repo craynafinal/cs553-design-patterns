@@ -1,5 +1,3 @@
-package pattpack.account;
-
 public class AccountFactoryStandard implements AccountAbstractFactoryIF {
 
 	// provide economy objects

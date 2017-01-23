@@ -1,5 +1,3 @@
-package pattpack.account;
-
 /**
  * Class abstracting a standard account.
  */

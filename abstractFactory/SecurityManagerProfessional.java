@@ -1,5 +1,3 @@
-package pattpack.account;
-
 /**
  *  Security manager of a professional account.
  */
