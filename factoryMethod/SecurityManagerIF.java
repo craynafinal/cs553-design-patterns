@@ -1,5 +1,3 @@
-package pattpack.account;
-
 /**
  *  Interface of all security managers of an account.
  */
@@ -12,10 +10,10 @@ public abstract class SecurityManagerIF {
      *    are exceeded.
      */
     public void checkLimits (AccountIF account) throws LimitsException {
-	if (account.getConnectionHoursThisMonth () > getConnectionHours ())
-	    throw new LimitsException ("Connection hours exceeds limit");
-	if (account.getConnectionSpeedThisLogin () > getConnectionSpeed ())
-	    throw new LimitsException ("Connection speed exceeds limit");
+			if (account.getConnectionHoursThisMonth () > getConnectionHours ())
+					throw new LimitsException ("Connection hours exceeds limit");
+			if (account.getConnectionSpeedThisLogin () > getConnectionSpeed ())
+					throw new LimitsException ("Connection speed exceeds limit");
     }
     /**
      *  Get the maximum allowed connection hours.
