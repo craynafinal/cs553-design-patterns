@@ -20,15 +20,18 @@ public class Client {
      *  @param ignore Ditto.
      */
     public static void main (String [] ignore) {
-	System.setSecurityManager (new RMISecurityManager ());
-	try {
-	    CalculatorIF calc = (CalculatorIF) Naming.lookup (name);
-	    float result = calc.add (3.3f, 4.4f);
-	    System.out.println ("Client: Calculator result: " + result);
-	}
-	catch (Exception e) {
-	    System.err.println ("Client exception: " + e.getMessage ());
-	    e.printStackTrace ();
-	}
+			// set the policy path
+			//System.setProperty("java.security.policy","file:./java.policy");
+
+			System.setSecurityManager (new RMISecurityManager ());
+			try {
+					CalculatorIF calc = (CalculatorIF) Naming.lookup (name);
+					//float result = calc.add (3.3f, 4.4f);
+					//System.out.println ("Client: Calculator result: " + result);
+			}
+			catch (Exception e) {
+					System.err.println ("Client exception: " + e.getMessage ());
+					e.printStackTrace ();
+			}
     }
 }
