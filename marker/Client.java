@@ -7,18 +7,18 @@ import java.rmi.*;
 public class Client {
 
 	/**
-		*  The name of the server, e.g., "//graystar.cs.pdx.edu/calculator"
-		*  or simply "calculator" if the client executes on the server's host.
-		*  Used to lookup the server on a network.
-		*/
+	 *  The name of the server, e.g., "//graystar.cs.pdx.edu/calculator"
+	 *  or simply "calculator" if the client executes on the server's host.
+	 *  Used to lookup the server on a network.
+	 */
 	private static final String name = "calculator";
 
 	/**
-		*  Usual main, command line arguments are ignored.
-		*  Install security manager, lookup remote calculator,
-		*  request an addition, and print the result.
-		*  @param ignore Ditto.
-		*/
+	 *  Usual main, command line arguments are ignored.
+	 *  Install security manager, lookup remote calculator,
+	 *  request an addition, and print the result.
+	 *  @param ignore Ditto.
+	 */
 	public static void main (String [] ignore) {
 
 		System.setSecurityManager (new RMISecurityManager ());
