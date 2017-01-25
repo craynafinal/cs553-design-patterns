@@ -24,8 +24,12 @@ public class Client {
 			System.setSecurityManager (new RMISecurityManager ());
 			try {
 					CalculatorIF calc = (CalculatorIF) Naming.lookup (name);
-					float result = calc.add (3.3f, 4.4f);
-					System.out.println ("Client: Calculator result: " + result);
+					float x = 3.3f;
+					float y = 4.4f;
+					System.out.println ("Client: Calculator result for add: " + calc.add(x,y));
+					System.out.println ("Client: Calculator result for sub: " + calc.sub(x,y));
+					System.out.println ("Client: Calculator result for times: " + calc.times(x,y));
+					System.out.println ("Client: Calculator result for divide: " + calc.divide(x,y));	
 			}
 			catch (Exception e) {
 					System.err.println ("Client exception: " + e.getMessage ());

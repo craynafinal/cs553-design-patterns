@@ -27,6 +27,8 @@ public class Calculator extends UnicastRemoteObject implements CalculatorIF {
      * @return the sum of x and y.
      */
     public float add (float x, float y) throws RemoteException { return x+y; }
-
+		public float sub (float x, float y) throws RemoteException { return x-y; }
+		public float times (float x, float y) throws RemoteException { return x*y; }
+		public float divide (float x, float y) throws RemoteException { return x/y; }
     // ... similar definitions of operations sub, times, divide, ... 
 } // class Calculator

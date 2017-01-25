@@ -15,6 +15,9 @@ public interface CalculatorIF extends Remote {
      * @return the sum of x and y.
      */
     public float add (float x, float y) throws RemoteException;
+		public float sub (float x, float y) throws RemoteException;
+		public float times (float x, float y) throws RemoteException;
+		public float divide (float x, float y) throws RemoteException;
     // ... similar definitions of operations sub, times, divide, ... 
 } // interface CalculatorIF
 
