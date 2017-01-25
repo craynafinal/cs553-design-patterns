@@ -15,20 +15,20 @@ import java.rmi.server.*;
 
 public class Calculator extends UnicastRemoteObject implements CalculatorIF {
 
-    /**
-     * Default constructor defined only because it may throw an exception.
-     */
-    public Calculator () throws RemoteException {}
+	/**
+	 * Default constructor defined only because it may throw an exception.
+	 */
+	public Calculator () throws RemoteException {}
 
-    /**
-     * Addition method.
-     * @param x Left operand.
-     * @param y Right operand.
-     * @return the sum of x and y.
-     */
-    public float add (float x, float y) throws RemoteException { return x+y; }
-		public float sub (float x, float y) throws RemoteException { return x-y; }
-		public float times (float x, float y) throws RemoteException { return x*y; }
-		public float divide (float x, float y) throws RemoteException { return x/y; }
-    // ... similar definitions of operations sub, times, divide, ... 
+	/**
+	 * Addition method.
+	 * @param x Left operand.
+	 * @param y Right operand.
+	 * @return the sum of x and y.
+	 */
+	public float add (float x, float y) throws RemoteException { return x+y; }
+	public float sub (float x, float y) throws RemoteException { return x-y; }
+	public float times (float x, float y) throws RemoteException { return x*y; }
+	public float divide (float x, float y) throws RemoteException { return x/y; }
+	// ... similar definitions of operations sub, times, divide, ... 
 } // class Calculator

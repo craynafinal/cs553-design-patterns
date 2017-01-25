@@ -6,34 +6,34 @@ import java.rmi.*;
 
 public class Client {
 
-    /**
-     *  The name of the server, e.g., "//graystar.cs.pdx.edu/calculator"
-     *  or simply "calculator" if the client executes on the server's host.
-     *  Used to lookup the server on a network.
-     */
-    private static final String name = "calculator";
+	/**
+		*  The name of the server, e.g., "//graystar.cs.pdx.edu/calculator"
+		*  or simply "calculator" if the client executes on the server's host.
+		*  Used to lookup the server on a network.
+		*/
+	private static final String name = "calculator";
 
-    /**
-     *  Usual main, command line arguments are ignored.
-     *  Install security manager, lookup remote calculator,
-     *  request an addition, and print the result.
-     *  @param ignore Ditto.
-     */
-    public static void main (String [] ignore) {
+	/**
+		*  Usual main, command line arguments are ignored.
+		*  Install security manager, lookup remote calculator,
+		*  request an addition, and print the result.
+		*  @param ignore Ditto.
+		*/
+	public static void main (String [] ignore) {
 
-			System.setSecurityManager (new RMISecurityManager ());
-			try {
-					CalculatorIF calc = (CalculatorIF) Naming.lookup (name);
-					float x = 3.3f;
-					float y = 4.4f;
-					System.out.println ("Client: Calculator result for add: " + calc.add(x,y));
-					System.out.println ("Client: Calculator result for sub: " + calc.sub(x,y));
-					System.out.println ("Client: Calculator result for times: " + calc.times(x,y));
-					System.out.println ("Client: Calculator result for divide: " + calc.divide(x,y));	
-			}
-			catch (Exception e) {
-					System.err.println ("Client exception: " + e.getMessage ());
-					e.printStackTrace ();
-			}
-    }
+		System.setSecurityManager (new RMISecurityManager ());
+		try {
+			CalculatorIF calc = (CalculatorIF) Naming.lookup (name);
+			float x = 3.3f;
+			float y = 4.4f;
+			System.out.println ("Client: Calculator result for add: " + calc.add(x,y));
+			System.out.println ("Client: Calculator result for sub: " + calc.sub(x,y));
+			System.out.println ("Client: Calculator result for times: " + calc.times(x,y));
+			System.out.println ("Client: Calculator result for divide: " + calc.divide(x,y));	
+		}
+		catch (Exception e) {
+			System.err.println ("Client exception: " + e.getMessage ());
+			e.printStackTrace ();
+		}
+	}
 }

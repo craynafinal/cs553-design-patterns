@@ -8,16 +8,16 @@ import java.rmi.*;
  *  are nearly identical.
  */
 public interface CalculatorIF extends Remote {
-    /**
-     * Addition method.
-     * @param x Left operand.
-     * @param y Right operand.
-     * @return the sum of x and y.
-     */
-    public float add (float x, float y) throws RemoteException;
-		public float sub (float x, float y) throws RemoteException;
-		public float times (float x, float y) throws RemoteException;
-		public float divide (float x, float y) throws RemoteException;
-    // ... similar definitions of operations sub, times, divide, ... 
+	/**
+	 * Addition method.
+	 * @param x Left operand.
+	 * @param y Right operand.
+	 * @return the sum of x and y.
+	 */
+	public float add (float x, float y) throws RemoteException;
+	public float sub (float x, float y) throws RemoteException;
+	public float times (float x, float y) throws RemoteException;
+	public float divide (float x, float y) throws RemoteException;
+	// ... similar definitions of operations sub, times, divide, ... 
 } // interface CalculatorIF
 
