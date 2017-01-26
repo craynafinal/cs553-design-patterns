@@ -158,4 +158,33 @@ public class LinkedList implements Cloneable, java.io.Serializable {
 				traversed = false;
 			} // try
 	} // findNull ()
+
+	// the original 3 methods from book
+	/**
+	 * Find an object in a linked list that is equal to the given
+	 * object. Equality is normally determined by calling the given
+	 * object's equals method. However, if the given object implements
+	 * the EqualByIdentity interface, then equality will be determined
+	 * by the == operator.
+	 */
+	// public LinkedList find(Object target) {
+	//	if (target == null || target instanceof EqualByIdentity)
+	//		return findEq(target);
+	//	else
+	//		return	findEquals(target);
+	//}	// find(Object)
+
+	/**
+	 * Find an object in a linked list that is equal to the given
+	 * object. Equality is determined by the == operator.
+	 */
+	// private synchronized LinkedList findEq(Object target) { ...	} // find(Object)
+
+	/**
+	 * Find an object in a linked list that is equal to the given
+	 * object. Equality is determined by calling the given
+	 * object's equals method.
+	 */
+	// private synchronized LinkedList findEqual(Object target) { ... } // find(Object)
+
 } // class LinkedList
