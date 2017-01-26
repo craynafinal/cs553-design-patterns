@@ -122,11 +122,14 @@ public class LinkedList implements Cloneable, java.io.Serializable {
 	 */
 	public LinkedList find(ComparableIF target) {
 		if (target == null)
+			// return null if target is null
 			return findNull ();
-		else
-			if (target.compare (head)) return this;
-		else
-			if (tail == null) return null;
+		else if (target.compare (head))
+			// return itself
+			return this;
+		else if (tail == null)
+			// the case it cannot find the target
+			return null;
 		else
 			try {
 				traversed = true;
@@ -146,8 +149,8 @@ public class LinkedList implements Cloneable, java.io.Serializable {
 	public LinkedList findNull () {
 		if (head == null)
 			return this;
-		else
-			if (tail == null) return null;
+		else if (tail == null)
+			return null;
 		else
 			try {
 				traversed = true;
