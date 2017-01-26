@@ -47,8 +47,8 @@ public class LinkedList implements Cloneable, java.io.Serializable {
 	/**
 	 * Return the head of this linked list.
 	 */
-	public ComparableIF getHead() {
-		return head;
+		public ComparableIF getHead() {
+			return head;
 	} // getHead()
 
 	/**
@@ -65,12 +65,12 @@ public class LinkedList implements Cloneable, java.io.Serializable {
 		if (tail == null)
 			return 1;
 		try {
-				traversed = true;
-				if (tail.traversed)
-					return 1;
-				return 1 + tail.size();
+			traversed = true;
+			if (tail.traversed)
+				return 1;
+			return 1 + tail.size();
 		} finally {
-				traversed = false;
+			traversed = false;
 		} // try
 	} // size()
 
@@ -122,10 +122,10 @@ public class LinkedList implements Cloneable, java.io.Serializable {
 	 */
 	public LinkedList find(ComparableIF target) {
 		if (target == null)
-			// return null if target is null
+			// null comparison if target is null
 			return findNull ();
 		else if (target.compare (head))
-			// return itself
+			// match, return itself
 			return this;
 		else if (tail == null)
 			// the case it cannot find the target
