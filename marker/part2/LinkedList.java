@@ -121,6 +121,7 @@ public class LinkedList implements Cloneable, java.io.Serializable {
 	 *         null if the target is not found.
 	 */
 	public LinkedList find(ComparableIF target) {
+		/*
 		if (target == null)
 			// null comparison if target is null
 			return findNull ();
@@ -139,6 +140,37 @@ public class LinkedList implements Cloneable, java.io.Serializable {
 			} finally {
 				traversed = false;
 			} // try
+		*/
+
+		boolean result = false;
+
+		try {
+			// head calls compare instead of target
+			result = head.compare(target);
+		} catch (NullPointerException e) {
+			// this means that the head is null
+			// if target is also null, return this
+			if (target == null) {
+				return this;
+			}
+		}
+
+		if (result) {
+			// return if the nodes match
+			return this;
+		} else if (tail == null) {
+			// if there is no more to go, return null
+			return null;
+		}	else {
+			try {
+				traversed = true;
+				if (tail.traversed)
+					return null;
+				return tail.find(target);
+			} finally {
+				traversed = false;
+			} // try
+		}			
 	} // find(ComparableIF)
 
 	/**
@@ -146,6 +178,8 @@ public class LinkedList implements Cloneable, java.io.Serializable {
 	 * @return the longest LinkedList whose head is contains a null object or
 	 *         null if the entire list contains only non-null objects.
 	 */
+
+	/*
 	public LinkedList findNull () {
 		if (head == null)
 			return this;
@@ -161,6 +195,7 @@ public class LinkedList implements Cloneable, java.io.Serializable {
 				traversed = false;
 			} // try
 	} // findNull ()
+	*/
 
 	// the original 3 methods from book
 	/**
