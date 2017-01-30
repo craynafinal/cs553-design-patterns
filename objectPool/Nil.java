@@ -18,15 +18,13 @@ public class Nil<E> extends List<E> {
      * This method always throws IllegalStateException.
      */ 
     public E head () throws IllegalStateException {
-	throw new IllegalStateException (
-	    "Attempt to compute the head of an empty list");
+			throw new IllegalStateException ("Attempt to compute the head of an empty list");
     }
     /**
      * This method always throws IllegalStateException.
      */ 
     public List<E> tail () throws IllegalStateException {
-	throw new IllegalStateException (
-	    "Attempt to compute the tail of an empty list");
+			throw new IllegalStateException ("Attempt to compute the tail of an empty list");
     }
     
 }

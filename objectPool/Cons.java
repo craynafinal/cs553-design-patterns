@@ -12,14 +12,14 @@ public class Cons<E> extends List<E> {
      *  @param tail the tail of the constructed list
      */
     public Cons (E head, List<E> tail) {
-	this.head = head;
-	this.tail = tail;
+			this.head = head;
+			this.tail = tail;
     }
     /**
      * Compute the length of this list.
      * @return The length of this list (always a positive value).
      */ 
-    public int length () { return 1+tail.length (); }
+    public int length () { return 1 + tail.length (); }
     /**
      * Tell whether this list contains any object.
      * @return The boolean value true.
@@ -41,7 +41,7 @@ public class Cons<E> extends List<E> {
      * @param tail The new tail of the cons. 
      */
     void reset (E head, List<E> tail) {
-	this.head = head;
-	this.tail = tail;
+			this.head = head;
+			this.tail = tail;
     }
 }
