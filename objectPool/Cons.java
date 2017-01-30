@@ -1,5 +1,3 @@
-package pattpack.pooledlist;
-
 /**
  * Implementation of a non-empty list (a cons).
  */

@@ -1,5 +1,3 @@
-package pattpack.pooledlist;
-
 /**
  * This class implements a pool of list cells.
  * It also maintains some statistics about the pool usage.

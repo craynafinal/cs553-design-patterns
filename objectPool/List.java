@@ -1,5 +1,3 @@
-package pattpack.pooledlist;
-
 /**
  * Abstract base class of all lists.
  */
