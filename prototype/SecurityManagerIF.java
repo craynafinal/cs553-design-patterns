@@ -1,9 +1,7 @@
-package pattpack.account;
-
 /**
  *  Interface of all security managers of an account.
  */
-public abstract class SecurityManagerIF {
+public abstract class SecurityManagerIF implements Cloneable {
     /**
      *  Check that an account usage does not violate the
      *  limits set for that account.
@@ -25,6 +23,14 @@ public abstract class SecurityManagerIF {
      *  Get the maximum allowed connection speed.
      */
     public abstract int getConnectionSpeed ();
+
+		public Object clone() {
+      try {
+        return super.clone();
+      } catch (CloneNotSupportedException e) {
+        throw new RuntimeException();
+      }
+    }
 }
 
 

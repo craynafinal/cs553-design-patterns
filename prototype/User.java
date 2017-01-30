@@ -1,5 +1,3 @@
-package pattpack.account;
-
 /**
  * This class represents a user of the internet service provider.
  */
@@ -14,15 +12,15 @@ public class User {
      *  @param securityManager The security manager of this user.
      */
     public User (AccountIF account, SecurityManagerIF securityManager) {
-	this.account = account;
-	this.securityManager = securityManager;
+			this.account = account;
+			this.securityManager = securityManager;
     }
     /**
      *  Login the user into the system.
      *  @exception LimitsException is the limits for this user are exceeded.
      */
     public void login () throws LimitsException {
-	securityManager.checkLimits (account);
+			securityManager.checkLimits (account);
     }
     /**
      *  Replace this user's account.
@@ -31,12 +29,12 @@ public class User {
      *  @param account The replacement account.
      */
     public void replaceAccount (AccountIF account) {
-	this.account = account;
+			this.account = account;
     }
     /**
      *  String representation of a user.
      */
     public String toString () {
-	return "User (" + account + ", " + securityManager + ")";
+			return "User (" + account + ", " + securityManager + ")";
     }
 }

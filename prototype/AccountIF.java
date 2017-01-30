@@ -1,9 +1,7 @@
-package pattpack.account;
-
 /**
  * Base class of all accounts.
  */
-public abstract class AccountIF {
+public abstract class AccountIF implements Cloneable {
     /** The id of this account. */
     protected int loginId;
     /** The number of connection hours used during the current month. */
@@ -21,6 +19,18 @@ public abstract class AccountIF {
      */
     public int getConnectionSpeedThisLogin () { return connectionSpeedThisLogin; }
     // mailboxes, storage, comains, etc.
+
+		public void setLoginId(int loginId) {
+			this.loginId = loginId;
+		}
+
+		public Object clone() {
+			try {
+				return super.clone();
+			} catch (CloneNotSupportedException e) {
+				throw new RuntimeException();
+			}
+		}
 }
 
 

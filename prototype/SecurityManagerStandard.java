@@ -1,7 +1,7 @@
 /**
- *  Security manager of an economy account.
+ *  Security manager of a standard account.
  */
-public class SecurityManagerEconomy extends SecurityManagerIF {
+public class SecurityManagerStandard extends SecurityManagerIF {
     /** Maximum connection hours per months. */
     private static final int connectionHoursLimit = 60;
     /** Maximum connection speed. */
@@ -17,10 +17,10 @@ public class SecurityManagerEconomy extends SecurityManagerIF {
      */
     public int getConnectionSpeed () { return connectionSpeedLimit; }
     /**
-     *  String representation of an economy security manager.
-     *  @return the representation of an economy security manager.
+     *  String representation of a standard security manager.
+     *  @return the representation of a standard security manager.
      */
-    public String toString () { return "SecurityManagerEconomy"; }
+    public String toString () { return "SecurityManagerStandard"; }
 }
 
 
