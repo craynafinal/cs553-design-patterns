@@ -2,23 +2,28 @@ public class Main {
 	public static void main (String[] args) {
 		/* expected result:
 			begin
-				fact := expression;
-				while expression do
+				fact = 1;
+				while (n > 1) do
 					begin
-						fact := expression;
-						n := expression
+						fact := fact * n;
+						n := n - 1
 					end
 			end
 		*/
 
-		Statement factorial = new Compound(
-			new Assignment("fact", new Expr()),
-			new While(new Expr(), new Compound(
-				new Assignment("fact", new Expr()),
-				new Assignment("n", new Expr()))));
+		Statement factorial = new Compound (
+	    new Assignment (new Variable ("fact"), new Variable ("1")),
+	    new While (new Gt (new Variable ("n"),
+			       						 new Variable ("1")), new Compound (
+     		new Assignment (new Variable ("fact"),
+												new Mul (new Variable ("fact"),
+					 							new Variable ("n"))),
+	     	new Assignment (new Variable ("n"),
+												new Sub (new Variable ("n"),
+					 											 new Variable ("1"))))));
 
 		// printing the result
 		factorial.print(System.out, 0);
-		System.out.println("\n");		
+		System.out.println("\n");
 	}
 }

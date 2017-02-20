@@ -11,5 +11,4 @@ public abstract class Statement {
 
 		out.print(text);
 	}
-
 }
