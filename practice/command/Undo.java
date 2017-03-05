@@ -1,7 +1,6 @@
-public class Undo extends CommandIF {
+public class Undo implements CommandIF {
 	public void execute() {
-		CommandIF last = super.popHistory();
-		last.undo(); 
+		throw new IllegalStateException("execute of undo");
 	}
 
 	public void undo() {

@@ -1,6 +1,5 @@
-public class Insert extends CommandIF {
+public class Insert implements CommandIF {
 	public void execute() {
-		super.saveHistory();
 		System.out.println("executing insert");
 	}
 

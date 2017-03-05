@@ -1,7 +1,6 @@
-public class Redo extends CommandIF {
+public class Redo implements CommandIF {
 	public void execute() {
-		CommandIF last = super.popHistory();
-		last.redo();
+		throw new IllegalStateException("execute of redo");
 	}
 
 	public void undo() {

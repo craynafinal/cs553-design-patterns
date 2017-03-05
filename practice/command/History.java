@@ -1,8 +1,6 @@
-public class History extends CommandIF {
+public class History implements CommandIF {
 	public void execute() {
-		for (CommandIF c : super.getHistory()) {
-			System.out.println(c);
-		}
+		throw new IllegalStateException("execute of history");
 	}
 
 	public void undo() {
